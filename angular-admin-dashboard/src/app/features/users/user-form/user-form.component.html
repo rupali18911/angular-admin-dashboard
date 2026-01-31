@@ -1,0 +1,28 @@
+<div class="backdrop">
+  <div class="modal">
+
+    <h3>{{ user ? 'Edit User' : 'Add User' }}</h3>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+      <input formControlName="name" placeholder="Name">
+      <input formControlName="email" placeholder="Email">
+
+      <select formControlName="role">
+        <option value="Admin">Admin</option>
+        <option value="User">User</option>
+      </select>
+
+      <select formControlName="status">
+        <option value="Active">Active</option>
+        <option value="Inactive">Inactive</option>
+      </select>
+
+      <div class="actions">
+        <button type="submit">Save</button>
+        <button type="button" class="cancel" (click)="close.emit()">Cancel</button>
+      </div>
+
+    </form>
+  </div>
+</div>
