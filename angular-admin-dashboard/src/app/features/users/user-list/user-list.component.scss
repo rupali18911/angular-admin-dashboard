@@ -1,0 +1,93 @@
+h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Add User button */
+button:first-of-type {
+  background: #4f46e5;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+th {
+  text-align: left;
+  padding: 12px;
+  background: #f3f4f6;
+  font-size: 13px;
+  color: #374151;
+}
+
+td {
+  padding: 12px;
+  font-size: 14px;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Row hover */
+tr:hover {
+  background: #f9fafb;
+}
+
+/* Action buttons */
+td button {
+  margin-right: 8px;
+}
+
+td button:first-child {
+  background: #22c55e;
+  color: #fff;
+}
+
+td button:last-child {
+  background: #ef4444;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  tr {
+    margin-bottom: 15px;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  th {
+    display: none;
+  }
+}

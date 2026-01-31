@@ -1,0 +1,13 @@
+<div class="backdrop">
+  <div class="dialog">
+
+    <h3>Confirm</h3>
+    <p>{{ message }}</p>
+
+    <div class="actions">
+      <button class="yes" (click)="confirm.emit()">Yes</button>
+      <button class="no" (click)="cancel.emit()">No</button>
+    </div>
+
+  </div>
+</div>

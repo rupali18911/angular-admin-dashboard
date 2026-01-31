@@ -1,0 +1,40 @@
+<app-loader [show]="loading()"></app-loader>
+
+<h2>Users</h2>
+
+<button (click)="addUser()">+ Add User</button>
+
+<table *ngIf="!loading()">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Role</th>
+    <th>Status</th>
+    <th>Action</th>
+  </tr>
+
+  <tr *ngFor="let u of users()">
+    <td>{{u.name}}</td>
+    <td>{{u.email}}</td>
+    <td>{{u.role}}</td>
+    <td>{{u.status}}</td>
+    <td>
+      <button (click)="editUser(u)">Edit</button>
+      <button (click)="askDelete(u.id!)">Delete</button>
+    </td>
+  </tr>
+</table>
+
+<app-user-form
+  *ngIf="showModal()"
+  [user]="selectedUser"
+  (save)="save($event)"
+  (close)="showModal.set(false)">
+</app-user-form>
+
+<app-confirm-dialog
+  *ngIf="showConfirm()"
+  message="Delete this user?"
+  (confirm)="confirmDelete()"
+  (cancel)="showConfirm.set(false)">
+</app-confirm-dialog>

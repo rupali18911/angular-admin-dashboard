@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Rupali Pardhe",
+      "email": "rupali@gmail.com",
+      "role": "Admin",
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "name": "Neha",
+      "email": "neha@gmail.com",
+      "role": "User",
+      "status": "Active"
+    }
+  ]
+}
